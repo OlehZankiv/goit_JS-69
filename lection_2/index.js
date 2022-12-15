@@ -5,7 +5,38 @@
 //
 //
 //
+
+// const name = "Oleh";
+
+// if (name === "Oleh") {
+//   console.log("YES");
+// } else {
+//   console.log("NO");
+// }
+
+// console.log(name === "Oleh" ? "YES" : "NO");
+
+// let color = "yellow";
+
+// switch (color) {
+//   case "yellow":
+//   case "white":
+//   case "red":
+//   case "orange":
+//     console.log("It's light color");
+//     break;
+//   case "black":
+//     console.log("It's dark color");
+//     break;
+// }
+
+// let age = 18;
+
+// let newAge = 10 + age++;
+
+// console.log(newAge, age);
 //
+
 // Модуль 1. Занятие 2. Ветвления. Циклы
 
 // =>
@@ -14,6 +45,17 @@
 // "Какое официальное название JavaScript?". Если пользователь вводит ECMAScript,
 // то показывай alert со строкой "Верно!", в противном случае - "Не знаете? ECMAScript!"
 
+// const result = prompt("Какое официальное название JavaScript?");
+
+// if (result.toLowerCase() === "ECMAScript".toLowerCase()) {
+//   console.log("Верно!");
+// } else {
+//   console.log("Не знаете? ECMAScript!");
+// }
+
+// const isCorrectAnswer = result.toLowerCase() === "ECMAScript".toLowerCase();
+// alert(isCorrectAnswer ? "Верно!" : "Не знаете? ECMAScript!");
+
 // =>
 // Example 2 - Отображение времени (if...else)
 // Напиши скрипт для отображения часов и минут в консоли браузера в
@@ -21,8 +63,15 @@
 // то выводи строку "14 ч.", без минут.
 
 // const hours = 14;
-// const minutes = 26;
-// let timestring;
+// const minutes = 10;
+
+// let timestring = `${hours}hr`;
+
+// if (minutes > 0) {
+//   timestring += ` ${minutes}m`;
+// }
+
+// console.log(timestring); // "14 год. 26 хв."
 
 // =>
 // Example 3 - Ветвеления
@@ -31,7 +80,25 @@
 // выводи в консоль строку "Это ноль". Если передали отрицательное число, в
 // консоли должна быть строка "Это отрицательное число".
 
-// const userInput = prompt('Введите число');
+// const userInput = Number(prompt("Введите число"));
+
+// if (isNaN(userInput)) {
+//   console.log("It's not a number");
+// } else if (userInput === 0) {
+//   console.log("It's 0");
+// } else {
+//   console.log(userInput > 0 ? "More than 0" : "Less than 0");
+// }
+
+// if (userInput > 0) {
+//   console.log("More than 0");
+// } else if (userInput < 0) {
+//   console.log("Less than 0");
+// } else if (userInput === 0) {
+//   console.log("It's 0");
+// } else {
+//   console.log("It's not a number");
+// }
 
 // =>
 // Example 4 - Вложенные ветвления
@@ -39,8 +106,14 @@
 // Если оба значения больше 100, то выведи в консоль максимальное из них.
 // В противном случае в консоли должна быть сумма значения b и числа 512.
 
-// const a = 120;
-// const b = 180;
+// const a = 250;
+// const b = 150;
+
+// if (a > 100 && b > 100) {
+//   console.log(Math.max(a, b));
+// } else {
+//   console.log(b + 512);
+// }
 
 // =>
 // Example 5 - Форматирование ссылки (endsWith)
@@ -48,8 +121,13 @@
 // переменной link символом /. Если нет, добавь в конец
 // значения link этот символ. Используй конструкцию if...else.
 
-// let link = 'https://my-site.com/about';
+// let link = "https://my-site.com/about";
 // // Пиши код ниже этой строки
+
+// if (link[link.length - 1] === "/") {
+// } else {
+//   link += "/";
+// }
 
 // // Пиши код выше этой строки
 // console.log(link);
@@ -61,8 +139,12 @@
 // но только в том случае, если в link есть подстрока "my-site".
 // Используй конструкцию if...else.
 
-// let link = 'https://somesite.com/about';
+// let link = "https://my-site.com/about";
 // // Пиши код ниже этой строки
+
+// if (!link.endsWith("/") && link.includes("my-site")) {
+//   link += "/";
+// }
 
 // // Пиши код выше этой строки
 // console.log(link);
@@ -92,7 +174,12 @@
 // меньше 17, выводи строку "Pending"
 // больше либо равно 17 и меньше либо равно 24, выводи строку "Expires"
 // больше 24, выводи строку "Overdue"
-// const hours = 10;
+
+// const hours = 27;
+
+// if (hours < 17) console.log("Pending");
+// else if (hours > 24) console.log("Overdue");
+// else console.log("Expires");
 
 // =>
 // Example 9 - Дедлайн сдачи проекта (if...else)
@@ -112,14 +199,22 @@
 
 // const daysUntilDeadline = 5;
 
-// if (daysUntilDeadline === 0) {
-//   console.log('Сегодня');
-// } else if (daysUntilDeadline === 1) {
-//   console.log('Завтра');
-// } else if (daysUntilDeadline === 2) {
-//   console.log('Послезавтра');
-// } else {
-//   console.log('Дата в будущем');
+// switch (daysUntilDeadline) {
+//   case 0:
+//     console.log("Сегодня");
+//     break;
+//   case 1:
+//     console.log("Завтра");
+//     break;
+//   case 2:
+//     console.log("Сегодня");
+//     break;
+//   case 0:
+//     console.log("Послезавтра");
+//     break;
+//   default:
+//     console.log("Дата в будущем");
+//     break;
 // }
 
 // =>
@@ -129,6 +224,12 @@
 
 // const max = 100;
 // const min = 20;
+
+// for (let i = min; i <= max; i += 1) {
+//   if (i % 5 === 0) {
+//     console.log(i);
+//   }
+// }
 
 // =>
 // Example 12 - Ввод пользователя и ветвления
@@ -142,3 +243,27 @@
 
 // Если введён пароль "Я админ", то вывести строку "Здравствуйте!"
 // Иначе выводить строку "Неверный пароль"
+
+// const login = prompt("Please enter me your login:");
+
+// if (login === "Admin") {
+//   const password = prompt("Please enter your password:");
+
+//   if (!password) {
+//     console.log("Cancel");
+//   } else {
+//     if (password === "I am admin") console.log("Hello!");
+//     else console.log("Password is incorrect");
+//   }
+// } else {
+//   console.log("I don't know who your are");
+// }
+
+switch (carType) {
+  case "sedan":
+    console.log("show sedan icon");
+    break;
+  case "universal":
+    console.log("show universal icon");
+    break;
+}
