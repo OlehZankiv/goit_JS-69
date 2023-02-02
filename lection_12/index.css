@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(152, 209, 228);
+  height: 100vh;
+}
+
+h2 {
+  margin: 0;
+}
+
+form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+input {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border-width: 0.5px;
+}
+
+
+button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#submit-login-button {
+  margin-top: 24px;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* IMPORTANT */
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  position: fixed;
+  z-index: 2000;
+  min-width: 40vw;
+  min-height: 30vw;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  padding: 32px;
+  border-radius: 12px;
+}
+
+
+.overlay {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.error {
+  color: red;
+  margin-top: 8px;
+}
