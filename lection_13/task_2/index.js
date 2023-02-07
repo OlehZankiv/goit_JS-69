@@ -14,3 +14,29 @@
 //  * Ціна за продукт;
 //  * Опис товару.
 //  Всі дані випадкові.
+
+const button = document.querySelector("button");
+const infoButton = document.querySelector("button .info");
+const infoContainer = document.querySelector("button .info-container");
+
+const infoButtonClickHandler = (e) => {
+  e.stopPropagation();
+  infoContainer.classList.toggle("hidden");
+};
+const infoContainerClickHandler = (e) => e.stopPropagation();
+
+infoButton.addEventListener("click", infoButtonClickHandler);
+
+infoContainer.addEventListener("click", infoContainerClickHandler);
+
+button.addEventListener(
+  "click",
+  () => {
+    button.innerHTML = "THANK YOU";
+    button.disabled = true;
+    button.classList.add("disabled");
+    infoButton.removeEventListener("click", infoButtonClickHandler);
+    infoContainer.removeEventListener("click", infoContainerClickHandler);
+  },
+  { once: true }
+);

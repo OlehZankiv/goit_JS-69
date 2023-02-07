@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    background-color: rgb(153, 205, 208);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+button {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    min-height: 40px;
+    padding: 4px 12px;
+    align-items: center;
+    border: 4px solid rgb(220, 77, 48);
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: rgb(255, 92, 59);
+    color: white !important;
+    font-weight: bold;
+    box-shadow: -2px 2px 6px rgb(70, 70, 70);
+}
+
+button:active {
+    background-color: rgb(214, 76, 48);
+    box-shadow: -1px 1px 4px rgb(70, 70, 70);
+}
+
+
+button.disabled {
+    border: 4px solid rgb(157, 157, 157);
+    cursor: default;
+    background-color: rgb(199, 199, 199);
+    box-shadow: -2px 2px 6px rgb(70, 70, 70);
+}
+
+
+button .info {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(224, 224, 224);
+    border-radius: 50%;
+    font-weight: bold;
+    color: rgb(255, 92, 59);
+}
+
+button .info:hover {
+    opacity: 0.7;
+}
+
+
+button .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    top: -12px;
+    right: 0;
+
+    padding: 24px;
+    background-color: rgb(117, 149, 146, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    box-shadow: -2px 2px 8px rgb(0, 0, 0, 0.5);
+    color: white;
+    transform: translate(50%, -100%);
+    text-align: left;
+    min-width: 40vw;
+    pointer-events: none;
+}
+
+h3, h4, p {
+    margin: 0;
+}
+
+.hidden {
+    display: none !important;
+}
