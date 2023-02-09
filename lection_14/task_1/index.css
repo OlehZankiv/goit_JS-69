@@ -1,4 +1,27 @@
+* {
+    cursor: none;
+}
+
 body {
     margin: 0;
     background-color: rgb(242, 214, 183);
+}
+
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: rgb(53, 53, 53);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+
+.cursor.hover {
+    background-color: rgb(255, 75, 75);
 }

@@ -14,9 +14,12 @@
         rel="stylesheet">
 
     <!-- CSS Files -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+
     <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- =======================================================
@@ -67,7 +70,7 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
-        <div class="container position-relative">
+        <div data-aos="fade-up" class="container position-relative">
             <h1>Welcome to Day</h1>
             <h2>We are team of talented designers making websites with Bootstrap</h2>
             <a href="#about" class="btn-get-started scrollto">Get Started</a>
@@ -80,10 +83,10 @@
         <section id="about" class="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 order-1 order-lg-2">
+                    <div data-aos="fade-left" class="col-lg-6 order-1 order-lg-2">
                         <img src="assets/img/about.jpg" class="img-fluid" alt="">
                     </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                    <div data-aos="fade-right" class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                         <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
                         <p class="fst-italic">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -118,7 +121,7 @@
 
                 <div class="row">
 
-                    <div class="col-lg-4">
+                    <div data-aos="fade-up" class="col-lg-4">
                         <div class="box">
                             <span>01</span>
                             <h4>Lorem Ipsum</h4>
@@ -127,7 +130,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div data-aos-offset="200" data-aos="fade-up" class="col-lg-4 mt-4 mt-lg-0">
                         <div class="box">
                             <span>02</span>
                             <h4>Repellat Nihil</h4>
@@ -136,7 +139,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div data-aos-offset="400" data-aos="fade-up" class="col-lg-4 mt-4 mt-lg-0">
                         <div class="box">
                             <span>03</span>
                             <h4> Ad ad velit qui</h4>
@@ -153,7 +156,7 @@
         <section id="clients" class="clients">
             <div class="container">
 
-                <div class="row d-flex align-items-center">
+                <div data-aos="zoom-in" class="row d-flex align-items-center">
 
                     <div class="col-lg-2 col-md-4 col-6">
                         <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
@@ -189,14 +192,14 @@
         <section id="services" class="services">
             <div class="container">
 
-                <div class="section-title">
+                <div data-aos="fade-up" class="section-title">
                     <span>Services</span>
                     <h2>Services</h2>
                     <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div data-aos="fade-up" class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bxl-dribbble"></i></div>
                             <h4><a href="">Lorem Ipsum</a></h4>
@@ -204,7 +207,8 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div data-aos="fade-up" data-aos-delay="150"
+                        class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-file"></i></div>
                             <h4><a href="">Sed ut perspiciatis</a></h4>
@@ -212,7 +216,8 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div data-aos="fade-up" data-aos-delay="300"
+                        class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
                             <h4><a href="">Magni Dolores</a></h4>
@@ -220,7 +225,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div data-aos="fade-up" class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-world"></i></div>
                             <h4><a href="">Nemo Enim</a></h4>
@@ -228,7 +233,8 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div data-aos="fade-up" data-aos-delay="150"
+                        class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-slideshow"></i></div>
                             <h4><a href="">Dele cardo</a></h4>
@@ -236,7 +242,8 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div data-aos="fade-up" data-aos-delay="300"
+                        class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-arch"></i></div>
                             <h4><a href="">Divera don</a></h4>
@@ -252,7 +259,7 @@
         <section id="cta" class="cta">
             <div class="container">
 
-                <div class="text-center">
+                <div data-aos="zoom-in" class="text-center">
                     <h3>Call To Action</h3>
                     <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
@@ -268,14 +275,14 @@
         <section id="contact" class="contact">
             <div class="container">
 
-                <div class="section-title">
+                <div data-aos="zoom-in" class="section-title">
                     <span>Contact</span>
                     <h2>Contact</h2>
                     <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div data-aos="fade-up" class="col-lg-6">
                         <div class="info-box mb-4">
                             <i class="bx bx-map"></i>
                             <h3>Our Address</h3>
@@ -284,7 +291,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="info-box  mb-4">
+                        <div data-aos="fade-up" class="info-box  mb-4">
                             <i class="bx bx-envelope"></i>
                             <h3>Email Us</h3>
                             <p>contact@example.com</p>
@@ -292,7 +299,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="info-box  mb-4">
+                        <div data-aos="fade-up" class="info-box  mb-4">
                             <i class="bx bx-phone-call"></i>
                             <h3>Call Us</h3>
                             <p>+1 5589 55488 55</p>
@@ -307,7 +314,7 @@
     <!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <footer id="footer">
+    <footer data-aos="zoom-in" data-aos-anchor-placement="top-bottom" id="footer">
         <div class="container">
             <div class="copyright">
                 &copy; Copyright <strong><span>Day</span></strong>. All Rights Reserved
@@ -323,7 +330,7 @@
     </footer>
     <!-- End Footer -->
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./index.js"></script>
 </body>
 
