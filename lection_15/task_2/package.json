@@ -1,0 +1,10 @@
+{
+  "name": "goit_lection_15",
+  "version": "1.0.0",
+  "description": "This is our first npm project",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Oleh Zankiv",
+  "license": "ISC"
+}
