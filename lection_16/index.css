@@ -25,16 +25,26 @@ body {
   flex: 0 0 calc(33.333% - 16px);
 }
 
+.book h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+          line-clamp: 1; 
+  -webkit-box-orient: vertical;
+
+}
+
 .book img {
   width: 17vw;
   height: 25vw;
 }
 
 .book button {
-  padding: 18px;
-  font-size: 24px;
+  padding: 16px;
+  font-size: 18px;
   width: 100%;
-}
+} 
 
 .cart, .back {
   position: fixed;
