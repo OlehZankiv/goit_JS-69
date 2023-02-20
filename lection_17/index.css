@@ -1,0 +1,75 @@
+body {
+    background-color: #222;
+    color: #ddd;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Task 1 */
+
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.notification-message {
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    border-radius: 4px;
+    display: flex;
+    column-gap: 8px;
+}
+
+.close-icon {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    cursor: pointer;
+}
+  
+.close-icon:before,
+.close-icon:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #721c24;
+}
+
+.close-icon:before {
+    transform: rotate(45deg);
+}
+
+.close-icon:after {
+    transform: rotate(-45deg);
+}
+
+
+/* Task 2 */
+
+.stock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.stock-date {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 16px;
+}
+
+.stock-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+}
