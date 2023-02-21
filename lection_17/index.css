@@ -8,6 +8,9 @@ body {
 
 .notification-container {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
     top: 20px;
     right: 20px;
     z-index: 9999;
