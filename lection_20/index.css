@@ -1,0 +1,30 @@
+body {
+    background-color: #222;
+    color: #ddd;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+    padding: 0 64px;
+}
+
+.pokemon-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+    height: 80vh;
+    overflow-y: scroll;
+    box-shadow: 0 0 18px black;
+    
+}
+
+.pokemon-list .pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    flex-basis: 30%;
+}
