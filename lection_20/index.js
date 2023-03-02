@@ -1,4 +1,21 @@
 //
+//
+
+// VISIT
+// loginRequest / registerRequest -> response (token) -> every next request set token
+
+// const login = () =>
+//   Promise.resolve(
+//     "Bearer aowidjaowidnpoawuhdiauwhdiauhwdiauwhdioawuhduwhdaiudhw"
+//   );
+
+// let apiToken;
+
+// login().then((token) => {
+//   apiToken = token;
+// });
+
+// fetch("https://", { headers: { Authorization: apiToken } });
 
 // Модуль 10 - Заняття 20 - Пагінація
 // 1. Pagination. Infinity Scroll;
@@ -23,8 +40,10 @@ class Api {
       });
   }
 
-  static get(url) {
-    return Api.#request(url);
+  static get(url, params) {
+    return Api.#request(
+      url + (params ? `?${new URLSearchParams(params)}` : "")
+    );
   }
 }
 
@@ -46,8 +65,41 @@ const createPokemon = (option) => {
 
 const pokemonList = document.querySelector(".pokemon-list");
 
-Api.get(GET_POKEMONS_URL).then((data) => {
-  Promise.all(data.results.map(({ url }) => Api.get(url))).then((res) => {
-    pokemonList.append(...res.map(createPokemon));
-  });
+let isLoading = false;
+
+const drawPokemonsCreator = () => {
+  const limit = 20;
+  let offset = 0;
+  let count = null;
+
+  return () => {
+    if (count && offset >= count) return;
+
+    isLoading = true;
+    Api.get(GET_POKEMONS_URL, {
+      offset,
+      limit,
+    }).then((data) => {
+      if (count === null) count = data.count;
+
+      Promise.all(data.results.map(({ url }) => Api.get(url)))
+        .then((res) => {
+          pokemonList.append(...res.map(createPokemon));
+          offset += limit;
+        })
+        .finally(() => (isLoading = false));
+    });
+  };
+};
+
+const drawPokemons = drawPokemonsCreator();
+drawPokemons();
+
+pokemonList.addEventListener("scroll", () => {
+  if (isLoading) return;
+
+  const scrollOffset = 120;
+  const scrollPosition = pokemonList.scrollHeight - pokemonList.scrollTop;
+
+  if (scrollPosition - scrollOffset <= pokemonList.clientHeight) drawPokemons();
 });
