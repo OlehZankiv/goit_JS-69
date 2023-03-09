@@ -104,8 +104,10 @@ class UsersServer {
 
     return new Promise((res) => {
       callWithRandomDelay(() => {
-        const updatedUser = { ...indexToUpdate[indexToUpdate], ...newUser };
+        const updatedUser = { ...allUsers[indexToUpdate], ...newUser };
+
         allUsers.splice(indexToUpdate, 1, updatedUser);
+
         this.#users = allUsers;
 
         res(stringify(updatedUser));
